@@ -7,6 +7,8 @@ namespace ToDoList
     {
         static void Main(string[] args)
         {
+            Console.SetWindowSize(120, 30);
+
             new ToDoList().Interface();
         }
     }
@@ -65,13 +67,16 @@ namespace ToDoList
 
                     Console.WriteLine($"You have {tasksCounter} tasks.");
 
-                    Console.WriteLine("Type:   \"a\" to add a new task.");
+                    Console.WriteLine("Type one of the following:");
+                    Console.WriteLine("\t\"a\" to add a new task.");
                     Console.WriteLine("\t\"s\" to move a task.");
                     Console.WriteLine("\t\"d\" to delete a task.");
                     Console.WriteLine("\t\"q\" to exit.");
                     Console.WriteLine("\t\"w\" to write the backup.");
                     Console.WriteLine("\t\"e\" to restore from the backup.");
                     Console.WriteLine("\t\"r\" to read the tasks. \n");
+
+                    Console.Write("Your option is: ");
                 }
 
                 //Navigation
